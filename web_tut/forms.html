@@ -1,0 +1,93 @@
+<!-- when we select label then it automatically selects that text or marks the checkbox this only happens when we write tag in label tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        input{
+            width: 100%;
+        }
+        button{
+            width: 100%;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is a coaching form</h2>
+    <!-- name attribute is used to use that imput in the backend -->
+    <form action="/forms.html">
+    Name : <input type="text" name="myname" value="Raj">
+    <br>
+    <input type="button" value="pen">
+    <br>
+    <label >
+    pizza: <input type="checkbox" name="pencil" checked>
+    </label>
+    <br>
+    <input type="email" name="myemail" value="rajat@kataria.com" >
+    <br>
+    <div>
+        gender: male <input type="radio" name="mygender"> female <input type="radio" name="mygender">
+    </div>
+    <!-- if name in two input radio are same then they become a radio button -->
+    transgender : <input type="radio" name="mygender">
+    <div>
+        <input type="date" name="mydob" >
+    </div><br>
+    <label for="name">YOur Name</label>
+    <div>
+        <input type="text" name="my_name" id="name">
+    </div>
+    <input type="submit" value="submit now">
+    <br>
+    <div>
+        <input type="reset" value="reset now">
+    </div><br>
+    <div>
+        <input type="datetime" name="mydob">
+    </div>
+</form>
+
+<!-- making a tag or element using javascript   IMPORTANT -->
+<br>
+<button onclick="mydate()" >click for date and time</button>
+<script>
+    function mydate()
+    {
+        var x=document.createElement("input");
+        x.setAttribute("type","datetime");
+        x.setAttribute("value","2121");
+        document.body.appendChild(x);
+    }
+</script>
+<button>click only</button>
+
+<div>
+    Your bio : <textarea name="mytext"  cols="5" rows="5" style="resize: none;"></textarea>
+</div>
+<br>
+<div>
+    <label for="country_name">Country :</label> 
+        
+    <select name="country" id="country_name">
+        <option value="australia">australia</option>
+        <option value="india">India</option>
+        <option value="china">China</option>
+    </select>
+    
+</div>
+<br>
+<div>
+    <label for="car">
+        <select name="mycar" id="car">
+            <option value="indica">indica</option>
+            <option value="bmw" selected>BMW</option>
+        </select>
+    </label>
+</div>
+
+</body>
+</html>
