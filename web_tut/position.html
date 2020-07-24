@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position :relative,static(default),absolute,fixed; */
+        .box{
+            /* display: inline-block; */
+            margin: 2px;
+            box-sizing: border-box;
+            border: 2px solid red;
+            padding: 2px;
+            width: 200px;
+            height: 200px;
+        }
+        /* #box3 {
+            position: relative;   // it is made with respect to the position in which it should be in                    //  its earlier position
+            top :34px;
+            right: 34px;
+        } */
+        /* #box3 {
+            position:absolute; this is used for with respect to the position of its parent
+            top:34px;
+            right: 34px;
+        } */
+        #box3 {
+             position: fixed;     /* it is used to make the thing fixed at that particular position on the screen. */
+            top:34px;
+            right:34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+    <div class="box" id="box5">4</div>
+</body>
+</html>
